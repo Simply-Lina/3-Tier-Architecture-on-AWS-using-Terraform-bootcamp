@@ -49,7 +49,7 @@ resource "aws_lb_target_group" "app_target_group" {
   }
 
 }
-
+// every load balancer needs a target group
 resource "aws_lb_target_group_attachment" "web_alb_attachment" {
   target_group_arn = aws_lb_target_group.app_target_group.arn
   target_id        = aws_instance.web-server.id
